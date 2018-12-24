@@ -28,7 +28,8 @@ public class WebTable {
 			}
 			System.out.println("highestNum:"+highestNum);
 			System.out.println("Row No."+rowNo);
-			driver.findElement(By.xpath("//table/tbody/tr["+(rowNo+2)+"]/td[4]/input")).click();
+			driver.findElement(By.xpath("//table/tbody/tr["+(rowNo+2)+"]/td[3]/a")).click();
+			System.out.println(driver.findElement(By.xpath("//table/tbody/tr["+(rowNo+2)+"]/td[3]/a")).getText());
 			Thread.sleep(5000);
 		} catch (InterruptedException|WebDriverException e) {
 			e.printStackTrace();
